@@ -16,8 +16,8 @@ shinyUI(fluidPage(
                
                h3("Other possibilities"),
                actionButton("controller2", label=textOutput("option2")),
-               actionButton("controller3", label=textOutput("option3"))
-               
+               actionButton("controller3", label=textOutput("option3")),
+               actionButton("controller4", label=textOutput("option4"))
                
         ),
         

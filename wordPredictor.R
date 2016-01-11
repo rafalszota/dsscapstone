@@ -5,7 +5,7 @@ predictWords <- function(text, context) {
         v4 <- context[["table4g"]][gsub("^.* (.* .* .*)$", "\\1", text)]$value
         v3 <- context[["table3g"]][gsub("^.* (.* .*)$", "\\1", text)]$value        
         v2 <- context[["table2g"]][gsub("^.* (.*)$", "\\1", text)]$value
-        v1 <- c("the", "a", "to")
+        v1 <- c("the", "a", "to", "and")
         
         result <- c(v4, v3, v2, v1)
         

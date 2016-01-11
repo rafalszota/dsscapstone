@@ -1,7 +1,8 @@
 h4 { color: #48ca3b; }
 
 #controller1 { width:100% }
-#controller2 { width:49% }
-#controller3 { width:49% }
+#controller2 { width:33% }
+#controller3 { width:33% }
+#controller4 { width:33% }
 
 #fullText{ width:100% }
