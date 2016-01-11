@@ -18,11 +18,14 @@ shinyServer(function(session,input, output) {
         } 
         
         addPredictedWord <- function(word) {
-                text <- paste(input$fullText, word)
+                
+                text <- paste(sub("\\s+$", "", input$fullText), word, "")
                 updateTextInput(session,"fullText", value=text)
                 doNextPrediction(text)
         }
         
+        
+      
         doNextPrediction("default value")
         
         observeEvent(input$predict, {doNextPrediction(input$fullText)})
