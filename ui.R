@@ -7,8 +7,9 @@ shinyUI(fluidPage(
         ),
         
         fluidRow(column(7,
+
                h3("Input your text here"), 
-               tags$textarea(id="fullText", rows=5, "Default value"), 
+               tags$textarea(id="fullText", rows=5, "Your message is..."), 
                actionButton("predict","Predict next word"),
                
                h3("Suggestet next word"),
@@ -62,8 +63,11 @@ shinyUI(fluidPage(
                 tags$li("For efficiency purposes the language model was reduced to a million most 
                         frequent n-grams."),
                 tags$li("In order to guarantee at least three predictions a the algorithm uses a 
-                        fallback to unigram: most frequent English words: the, a, of."))
-
+                        fallback to unigram: most frequent English words: the, a, of.")),
+               
+               h4("Find more"),
+               a(href="http://rpubs.com/szocik/dsscapstone", "http://rpubs.com/szocik/dsscapstone")
+                        
         )
         
         

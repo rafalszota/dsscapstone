@@ -26,7 +26,7 @@ shinyServer(function(session,input, output) {
         
         
       
-        doNextPrediction("default value")
+        doNextPrediction("Your message is...")
         
         observeEvent(input$predict, {doNextPrediction(input$fullText)})
         observeEvent(input$controller1, {addPredictedWord(predictedWords[1])})
