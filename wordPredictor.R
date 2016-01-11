@@ -1,10 +1,17 @@
-predictWords <- function(text, contextData) {
+predictWords <- function(text, context) {
         
-        lastWords <- tail(unlist(strsplit(text, split=" ")),3)
+        text <- gsub("[^ a-z']", "", tolower(text))
         
+        v4 <- context[["table4g"]][gsub("^.* (.* .* .*)$", "\\1", text)]$value
+        v3 <- context[["table3g"]][gsub("^.* (.* .*)$", "\\1", text)]$value        
+        v2 <- context[["table2g"]][gsub("^.* (.*)$", "\\1", text)]$value
+        v1 <- c("the", "a", "to")
         
-        head(c(lastWords, contextData[1:3]),3)
+        result <- c(v4, v3, v2, v1)
         
+        result <- result[!is.na(result)]
+        unique(result)
+
 }
 
 
